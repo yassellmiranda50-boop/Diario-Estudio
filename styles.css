@@ -56,8 +56,25 @@ body {
 }
 
 .racha-fuego {
-  font-size: 2.6rem;
-  line-height: 1;
+  display: inline-block;
+  transform-origin: center bottom;
+  animation: fuego-vivo 1s ease-in-out infinite alternate;
+}
+
+@keyframes fuego-vivo {
+  from {
+    transform: translateY(0) rotate(-4deg) scale(1);
+  }
+
+  to {
+    transform: translateY(-4px) rotate(4deg) scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .racha-fuego {
+    animation: none;
+  }
 }
 
 .racha-numero {
